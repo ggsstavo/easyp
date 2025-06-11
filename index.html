@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./firebaseauth.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="tab-header">
+      <button class="active" data-target="form-signin">Entrar</button>
+      <button data-target="form-signup">Registrar</button>
+    </div>
+
+    <form id="form-signin" class="active">
+      <div id="msg-signin" class="message"></div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input name="email" type="email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input name="password" type="password" placeholder="Senha" required>
+        <i class="fa-solid fa-car eye-icon"></i>
+      </div>
+      <button class="btn">Entrar</button>
+      <p class="or">ou</p>
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+    </form>
+
+    <form id="form-signup">
+      <div id="msg-signup" class="message"></div>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input name="firstName" type="text" placeholder="Nome" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input name="lastName" type="text" placeholder="Sobrenome" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input name="email" type="email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input name="password" type="password" placeholder="Senha" required>
+        <i class="fa-solid fa-car eye-icon"></i>
+      </div>
+      <button class="btn">Registrar</button>
+      <p class="or">ou</p>
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
