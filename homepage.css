@@ -116,7 +116,7 @@ body {
       border-radius: var(--radius);
       padding: 10rem 1.5rem 1.5rem 1.5rem;
       flex: 1;
-      max-width: 320px;
+      max-width: 300px;
       min-width: 260px;
       position: relative;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
