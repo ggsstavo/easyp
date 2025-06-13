@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <script type="module" src="./firebaseauth.js"></script>
 </head>
 <body>
-    <h1>HOME</h1>
+
+  <nav class="navbar">
+    <i class="fas fa-right-from-bracket navbar__logout" title="Sair" id="logout"></i>
+    <div class="navbar__brand">
+      <h1>EasyP</h1>
+    </div>
+    <div class="navbar__actions">
+      <i class="fas fa-user-circle navbar__icon" title="Usuário"></i>
+    </div>
+  </nav>
+  <main class="main-content">
+    <div class="greeting">
+      <h1 id="greeting-text">Olá, Usuário</h1>
+      <p>podemos encontrar uma vaga de estacionamento para você?</p>
+    </div>
+    <h2 class="section-title">Navegue livremente por aqui</h2>
+    <div class="cards">
+      <div class="card">
+        <h1>Eu quero<br>encontrar meu lugar</h1>
+        <p>Encontre sua vaga de estacionamento através de nossos sensores IoT espalhados por toda a cidade</p>
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+      <div class="card">
+        <h1>Verifique meus veículos</h1>
+        <p>Aqui você pode encontrar o modelo e a placa do seu veículo.</p>
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

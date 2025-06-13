@@ -47,12 +47,14 @@
       font-size: 1.1rem;
       cursor: pointer;
       transition: background var(--duration);
+      z-index: 1;
     }
 
     .tab-header button.active {
       background: var(--primary);
       color: var(--white);
       border-radius:  0 0 15px 0px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
 
     .tab-header button:last-child.active {
@@ -210,4 +212,11 @@
       .tab-header button { font-size: .9rem; padding: .5rem; }
       .or { margin: 1rem 0; }
       .eye-icon { right: .5rem; }
+    }
+
+    .home-img {
+      display: block;
+      margin: -3rem auto -7rem auto;
+      max-width: 350px;
+      height: 350px;
     }
