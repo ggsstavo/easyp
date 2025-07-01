@@ -1,0 +1,98 @@
+:root {
+      --primary: #1649ff;
+      --bg: #0c2066;
+      --white: #fff;
+      --shadow: rgba(0,0,0,0.3);
+      --radius: 10px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px var(--shadow);
+    }
+    .back-arrow {
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      color: var(--white);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+    .card-vehicle {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 0 auto 20px;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .card-vehicle:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+    .vehicle-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .vehicle-info i {
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    .vehicle-details {
+      text-align: left;
+    }
+    .vehicle-details .brand {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .vehicle-details .plate {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #e74c3c;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .delete-btn:hover {
+      color: #c0392b;
+    }
+    .add-vehicle {
+      background: var(--white);
+      color: var(--bg);
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 8px var(--shadow);
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 16px;
+    }
+    .add-vehicle:hover {
+      background: #e0e0e0;
+      transform: translateY(-3px);
+    }
