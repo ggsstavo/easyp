@@ -96,3 +96,7 @@
       background: #e0e0e0;
       transform: translateY(-3px);
     }
+
+    .add-vehicle i{
+        margin-right: 10px;
+    }
