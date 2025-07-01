@@ -9,15 +9,14 @@
 </head>
 <body>
   <header>
-    <div class="back-arrow" onclick="history.back()">
-      <i class="fa-solid fa-angles-left"></i>
-    </div>
+    <div class="back-arrow" onclick="history.back()"><i class="fa-solid fa-angles-left"></i></div>
     <h1>Declaração</h1>
   </header>
 
   <div class="card-saldo">
-    <h2>Saldo disponível</h2>
-    <div class="valor">R$ 1.000,00</div>
+    <h2>Saldo disponível:</h2>
+    <div class="valor" id="balance">R$ 1.000,00</div>
+    <div class="toggle-eye" id="toggleEye"><i class="fa-solid fa-eye"></i></div>
   </div>
 
   <ul class="extrato">
@@ -42,5 +41,32 @@
       </div>
     </li>
   </ul>
+
+  <script>
+    const balanceEl = document.getElementById('balance');
+    const toggleEye = document.getElementById('toggleEye');
+    const eyeIcon = toggleEye.querySelector('i');
+
+    let show = localStorage.getItem('showBalance');
+    if (show === null) show = 'true';
+
+    function updateVisibility() {
+      if (show === 'true') {
+        balanceEl.classList.remove('hidden');
+        eyeIcon.className = 'fa-solid fa-eye';
+      } else {
+        balanceEl.classList.add('hidden');
+        eyeIcon.className = 'fa-solid fa-eye-slash';
+      }
+    }
+
+    updateVisibility();
+
+    toggleEye.addEventListener('click', () => {
+      show = (show === 'true') ? 'false' : 'true';
+      localStorage.setItem('showBalance', show);
+      updateVisibility();
+    });
+  </script>
 </body>
 </html>

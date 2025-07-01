@@ -15,7 +15,11 @@
 
   <div class="card">
     <div class="label">Saldo disponível</div>
-    <div class="value">R$ 1.000,00</div>
+    <div class="value-wrapper">
+      <div class="value" id="balance">R$ 1.000,00</div>
+      <div class="tarja" id="tarja"></div>
+    </div>
+    <div class="toggle-eye" id="toggleEye"><i class="fa-solid fa-eye"></i></div>
   </div>
 
   <div class="security" id="security-message">Para sua segurança, o limite de recarga diária é de R$100,00</div>
@@ -104,6 +108,30 @@
         }
         updateAmount(valueToAdd);
       });
+    });
+
+    const balanceEl = document.getElementById('balance');
+    const toggleEye = document.getElementById('toggleEye');
+    const eyeIcon = toggleEye.querySelector('i');
+    const tarja = document.getElementById('tarja');
+    let show = localStorage.getItem('showBalance');
+    if (show === null) show = 'true';
+    function updateVisibility() {
+      if (show === 'true') {
+        balanceEl.classList.remove('hidden');
+        tarja.style.display = 'none';
+        eyeIcon.className = 'fa-solid fa-eye';
+      } else {
+        balanceEl.classList.add('hidden');
+        tarja.style.display = 'block';
+        eyeIcon.className = 'fa-solid fa-eye-slash';
+      }
+    }
+    updateVisibility();
+    toggleEye.addEventListener('click', () => {
+      show = (show === 'true') ? 'false' : 'true';
+      localStorage.setItem('showBalance', show);
+      updateVisibility();
     });
   </script>
 </body>
