@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar Crédito</title>
+  <link rel="stylesheet" href="./adicionar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+<body>
+  <header>
+    <div class="back-arrow" onclick="history.back()"><i class="fa-solid fa-angles-left"></i></div>
+    <div class="logo">(Logo)</div>
+  </header>
+
+  <div class="card">
+    <div class="label">Saldo disponível</div>
+    <div class="value">R$ 1.000,00</div>
+  </div>
+
+  <div class="security" id="security-message">Para sua segurança, o limite de recarga diária é de R$100,00</div>
+
+  <div class="recharge">
+    <button id="decrease">-</button>
+    <div class="amount" id="amount">10,00</div>
+    <button id="increase">+</button>
+  </div>
+
+  <div class="quick-buttons">
+    <button data-value="100">+100</button>
+    <button data-value="50">+50</button>
+    <button data-value="30">+30</button>
+    <button data-value="20">+20</button>
+    <button data-value="15">+15</button>
+    <button data-value="10">+10</button>
+  </div>
+
+  <div class="methods-title">Métodos de pagamentos</div>
+  <div class="methods">
+    <div class="method">
+      <i class="fa-brands fa-pix"></i>
+      <span>Pix</span>
+    </div>
+    <div class="method">
+      <i class="fa-solid fa-credit-card"></i>
+      <span>Cartão</span>
+    </div>
+    <div class="method">
+      <i class="fa-solid fa-barcode"></i>
+      <span>Boleto</span>
+    </div>
+  </div>
+
+  <script>
+    const amountEl = document.getElementById('amount');
+    const increaseBtn = document.getElementById('increase');
+    const decreaseBtn = document.getElementById('decrease');
+    const quickButtons = document.querySelectorAll('.quick-buttons button');
+    const securityMessage = document.getElementById('security-message');
+    const MAX_LIMIT = 100;
+    let currentValue = 10;
+
+    function updateAmount(newValue) {
+      if (newValue > MAX_LIMIT) {
+        showWarning();
+        return false;
+      }
+      currentValue = newValue;
+      amountEl.textContent = currentValue.toFixed(2).replace('.', ',');
+      hideWarning();
+      return true;
+    }
+
+    function showWarning() {
+      securityMessage.textContent = 'Valor máximo diário de recarga é R$100,00!';
+      securityMessage.classList.add('warning');
+    }
+
+    function hideWarning() {
+      securityMessage.textContent = 'Para sua segurança, o limite de recarga diária é de R$100,00';
+      securityMessage.classList.remove('warning');
+    }
+
+    increaseBtn.addEventListener('click', () => {
+      updateAmount(currentValue + 5);
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      if (currentValue - 5 >= 0) {
+        updateAmount(currentValue - 5);
+      }
+    });
+
+    setTimeout(() => {
+    hideWarning();
+  }, 10000);
+
+    quickButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const valueToAdd = Number(button.getAttribute('data-value'));
+        if (valueToAdd > MAX_LIMIT) {
+          showWarning();
+          return;
+        }
+        updateAmount(valueToAdd);
+      });
+    });
+  </script>
+</body>
+</html>
+

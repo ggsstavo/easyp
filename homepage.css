@@ -157,6 +157,15 @@ body {
       }
     }
 
+    @media (max-width: 340px) {
+      .card-img{
+        width: 240px;
+      height: 140px;
+      left: -40px;
+      top: 0px;
+      }
+    }
+
     /* Small Cards */
         .small-cards {
             display: flex;
@@ -204,6 +213,21 @@ body {
 
         .statement-link:hover {
             color: #2c3e50;
+        }
+
+        .statement-link a{
+          display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .statement-link a:hover{
+          color: #2c3e50;
         }
 
 .big-button {
@@ -313,6 +337,13 @@ body {
 
     .region-name {
             font-weight: 600;
+        }
+
+        .versao{
+          color: var(--white);
+          text-align: center;
+          font-size: 0.7em;
+          margin-top: 0.5em;
         }
 
     /* Footer */

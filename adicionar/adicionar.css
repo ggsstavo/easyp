@@ -1,0 +1,152 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1649ff;
+      color: #f0f0f0;
+      padding: 16px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .back-arrow {
+      position: absolute;
+      left: 0;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .card {
+      background: #0c2066;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card .label {
+      font-size: 1rem;
+      color: #cccccc;
+    }
+    .card .value {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .security {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #cccccc;
+      margin-bottom: 24px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      transition: background-color 0.6s ease, opacity 0.6s ease;
+    }
+    .security.warning {
+      background-color: rgba(255, 69, 0, 0.8);
+      color: #fff;
+      font-weight: bold;
+      animation: blink 1s ease-in-out infinite alternate;
+    }
+    @keyframes blink {
+      0% {opacity: 1;}
+      100% {opacity: 0.5;}
+    }
+    .recharge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .recharge button {
+      background: #0c2066;
+      border: none;
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+    .recharge .amount {
+      margin: 0 24px;
+      font-size: 1.5rem;
+      min-width: 80px;
+      text-align: center;
+      user-select: none;
+    }
+    .quick-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto 24px auto;
+    }
+    .quick-buttons button {
+      background: #0c2066;
+      border: none;
+      color: #ffffff;
+      padding: 16px;
+      font-size: 1.125rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+    .methods-title {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .methods {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .method {
+      background: #0c2066;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      width: 80px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      cursor: pointer;
+      user-select: none;
+    }
+    .method i {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      display: block;
+      color: #ffffff;
+    }
+    .method span {
+      font-size: 0.875rem;
+      color: #cccccc;
+    }
