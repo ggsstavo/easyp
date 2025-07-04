@@ -1,0 +1,162 @@
+:root {
+      --primary: #1649ff;
+      --dark-blue: #0c2066;
+      --light: #f0f0f0;
+      --shadow: rgba(0, 0, 0, 0.3);
+      --radius: 12px;
+      --duration: 0.3s;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--primary);
+      color: var(--light);
+      padding: 16px;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .back-arrow {
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--light);
+      transition: transform var(--duration);
+    }
+    .back-arrow:hover { transform: scale(1.1); }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .location-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--dark-blue);
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px var(--shadow);
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: background var(--duration), transform var(--duration);
+    }
+    .location-btn:hover {
+      background: #1a2a9e;
+      transform: translateY(-2px);
+    }
+    .instruction {
+      margin-bottom: 16px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .map-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--dark-blue);
+      padding: 10px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px var(--shadow);
+      width: calc(100% - 32px);
+      max-width: 400px;
+      margin: 0 auto 24px;
+      cursor: pointer;
+      transition: background var(--duration), transform var(--duration);
+    }
+    .map-btn:hover {
+      background: #e6e6e6;
+      transform: translateY(-2px);
+    }
+    .map-btn i { font-size: 1.2rem; }
+    .instruction-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .video-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 24px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 8px var(--shadow);
+      animation: fadeInUp 0.6s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);} 
+      to { opacity: 1; transform: translateY(0);} 
+    }
+    .cards-container {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .info-card {
+      background: var(--dark-blue);
+      padding: 16px;
+      border-radius: var(--radius);
+      width: 120px;
+      box-shadow: 0 4px 8px var(--shadow);
+      transition: transform var(--duration), box-shadow var(--duration);
+    }
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+    .info-card .title {
+      font-size: 0.875rem;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+    .info-card .value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .info-card .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--light);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: color var(--duration);
+    }
+    .info-card .action i { font-size: 1rem; }
+    .info-card .action:hover { color: #ddd; }
+    .info-card:nth-child(3) .action {
+      display: flex;
+    }
+    .info-card:nth-child(-n+2) .action {
+      display: none;
+    }
+    .reserve-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #28a745;
+      color: #fff;
+      padding: 14px 80px;
+      border-radius: 32px;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: background var(--duration), transform var(--duration);
+    }
+    .reserve-btn:hover {
+      background: #218838;
+      transform: translateY(-2px);
+    }
